@@ -17,7 +17,9 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-	public static ...
+	public static void numSecuencias(int vector[]) {
+		
+	}
 	
 	/*
 	 * 1 punto

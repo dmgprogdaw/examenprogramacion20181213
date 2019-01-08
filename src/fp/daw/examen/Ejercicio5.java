@@ -23,7 +23,7 @@ public class Ejercicio5 {
 		Random r = new Random();
 		Scanner teclado = new Scanner(System.in);
 		
-		int aleatorio = r.nextInt(300-100);
+		int aleatorio = r.nextInt(101)+100;
 		int numero = 0;
 		
 		while (numero != aleatorio) {
@@ -32,8 +32,7 @@ public class Ejercicio5 {
 			if (numero == aleatorio) {
 				System.out.println("Acertaste el número");
 			}
-		}
-		
+		}	
 		teclado.close();
 	}
 

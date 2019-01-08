@@ -1,5 +1,8 @@
 package fp.daw.examen;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Ejercicio2 {
 
 	/* 
@@ -13,9 +16,6 @@ public class Ejercicio2 {
 	 *  
 	 */
 	
-	public static void busquedaBinaria(int vector[], int num) {
-		
-	}
 	
 	
 	/*
@@ -34,8 +34,23 @@ public class Ejercicio2 {
 	 */
 	
 	public static void main(String[] args) {
-		
-		
+		Random r = new Random();
+		int n = r.nextInt(101) + 100;
+		int [] v = new int [n];
+		long limite = (long)Integer.MAX_VALUE - (long)Integer.MIN_VALUE;
+		long valor;
+		int indice;
+		for (int i=0; i<v.length; i++) {
+			valor = r.nextLong() % limite + Integer.MIN_VALUE;
+			v[i] = (int) valor;
+		}
+		Arrays.sort(v);
+		do {
+			valor = r.nextLong() % limite + Integer.MIN_VALUE;
+			indice = Arrays.binarySearch(v, (int) valor);
+		}while( indice < 0);
+		System.out.println("El valor " + valor + " se encuentra en ");
+		System.out.println("la posicion " + indice);
 	}
 
 }
